@@ -1,0 +1,6 @@
+<div class="app-container"
+     role="main">
+  <app-input (inputEmitter)="changeNumber($event)"></app-input>
+  <app-settings [modes]="modes" (modeEmitter)="changeMode($event)"></app-settings>
+  <app-output [output]="currentOutput"></app-output>
+</div>

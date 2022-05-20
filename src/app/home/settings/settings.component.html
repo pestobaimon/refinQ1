@@ -1,0 +1,6 @@
+<div class="container">
+  <select (change)="onChange($event)" name="settings">
+    <option *ngFor="let mode of modes; let i=index" [ngValue]="mode">{{mode}}</option>
+  </select>
+  <div class="border"></div>
+</div>
