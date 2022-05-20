@@ -31,6 +31,11 @@ export class InputComponent implements OnInit {
       target.value = target.value.substring(0, max_chars);
     }
     if (target.value.length <= max_chars)
-      this.inputEmitter.emit(Number(target.value));
+      if (Number(target.value) < 0) {
+        target.value = '1';
+        this.inputEmitter.emit(1);
+      } else {
+        this.inputEmitter.emit(Number(target.value));
+      }
   }
 }
